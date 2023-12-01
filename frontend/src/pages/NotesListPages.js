@@ -26,7 +26,6 @@ const NotesListPages = () => {
                 <h2 className='notes-title'>&#9782; Notes</h2>
                 <p className='notes-count'>{notes.length}</p>
             </div>
-            <div className='notes-list-item'>
             { isLoading ? (
                 <p>Loading notes...</p>
             ) : notes.length === 0 ? (
@@ -34,7 +33,6 @@ const NotesListPages = () => {
             ) : (
                 notes.map(note => <ListItem key={note.id} note={note} />)
             )}
-            </div>
             
             <AddButton />
         </div>
